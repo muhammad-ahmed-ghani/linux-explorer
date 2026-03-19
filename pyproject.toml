@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "linux-explorer"
+version = "0.0.2"
+authors = [
+  { name="Muhammad Ahmed", email="i.am.a.pakistani.programmer@gmail.com" },
+]
+description = "Professional enterprise file explorer for Linux with modern UI, background daemon mode, and comprehensive file operations"
+readme = "README.md"
+requires-python = ">=3.7"
+license = "MIT"
+dependencies = [
+  "psutil",
+  "nvidia-ml-py"
+]
+
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+    "Operating System :: POSIX :: Linux",
+]
+
+[project.urls]
+Homepage = "https://github.com/muhammad-ahmed-ghani/linux-explorer"
+Repository = "https://github.com/muhammad-ahmed-ghani/linux-explorer"
+
+[project.scripts]
+linux-explorer = "galleryview.server:main"
+lexplorer = "galleryview.server:main"
+lex = "galleryview.server:main"
+
+[tool.setuptools]
+packages = ["galleryview"]
+
+[tool.setuptools.package-data]
+galleryview = ["*.html", "*.jpg"]
